@@ -35,6 +35,11 @@ Install the app::
         'healthpoint'
     ]
 
+    # If specified, this user is able to see the details for each
+    # individual check in the endpoint.
+    HEALTHPOINT_BASICAUTH_USERNAME = 'john'
+    HEALTHPOINT_BASICAUTH_PASSWORD = 'doe'
+
     # urls.py
     urlpatterns = [
         ...
