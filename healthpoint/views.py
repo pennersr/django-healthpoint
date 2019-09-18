@@ -33,7 +33,7 @@ def health(request):
             health_check.__qualname__])
         data['success' if success else 'error'][func] = detail
         if not success:
-            status = 500
+            status = 503
     # Only staff members are allowed to see details...
     if not _show_health_details(request):
         data = {}

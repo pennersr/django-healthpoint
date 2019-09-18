@@ -6,4 +6,4 @@ class HealthTestCase(TestCase):
 
     def test_health(self):
         resp = self.client.get(reverse('healthpoint_health'))
-        self.assertEqual(resp.status_code, 500)
+        self.assertEqual(resp.status_code, 503)
