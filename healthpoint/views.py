@@ -24,13 +24,16 @@ def _show_health_details(request):
 
 
 def health(request):
+    tests = request.GET.getlist('test')
     data = {'success': {}, 'error': {}}
     status = 200
     for health_check in get_health_checks():
-        success, detail = health_check()
         func = '.'.join([
             health_check.__module__,
             health_check.__qualname__])
+        if tests and func not in tests:
+            continue
+        success, detail = health_check()
         data['success' if success else 'error'][func] = detail
         if not success:
             status = 503
