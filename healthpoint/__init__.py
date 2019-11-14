@@ -4,7 +4,7 @@
 |  | |___ /~~\ |___  |  |  | |    \__/ | | \|  |
 
 """
-VERSION = (0, 3, 0, 'final', 0)
+VERSION = (0, 4, 0, 'final', 0)
 
 __title__ = 'django-healthpoint'
 __version_info__ = VERSION
