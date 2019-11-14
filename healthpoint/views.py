@@ -24,7 +24,7 @@ def _show_health_details(request):
 
 
 def health(request):
-    tests = request.GET.getlist('test')
+    tests = set(request.GET.getlist('test'))
     data = {'success': {}, 'error': {}}
     status = 200
     for health_check in get_health_checks():
@@ -33,10 +33,16 @@ def health(request):
             health_check.__qualname__])
         if tests and func not in tests:
             continue
+        tests.discard(func)
         success, detail = health_check()
         data['success' if success else 'error'][func] = detail
         if not success:
             status = 503
+    if tests:
+        if status == 200:
+            status = 404
+        for test in tests:
+            data['error'][test] = 'Unknown health check'
     # Only staff members are allowed to see details...
     if not _show_health_details(request):
         data = {}
