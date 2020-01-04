@@ -18,6 +18,9 @@ Welcome to django-healthpoint!
 .. image:: https://pennersr.github.io/img/bitcoin-badge.svg
    :target: https://blockchain.info/address/1AJXuBMPHkaDCNX2rwAy34bGgs7hmrePEr
 
+.. image:: https://pennersr.github.io/img/emacs-badge.svg
+   :target: https://www.gnu.org/software/emacs/
+
 Framework for adding an endpoint for health checks to your project.
 
 Source code
