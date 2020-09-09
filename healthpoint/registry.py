@@ -15,6 +15,7 @@ def get_health_checks():
                 importlib.import_module('{}.health'.format(app))
             except ImportError:
                 pass
+        _initialized = True
     return _checks
 
 
