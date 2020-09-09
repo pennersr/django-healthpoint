@@ -2,7 +2,6 @@ import base64
 
 from django.conf import settings
 from django.http import JsonResponse
-
 from healthpoint.registry import get_health_checks
 
 
@@ -25,6 +24,7 @@ def _show_health_details(request):
 
 def health(request):
     tests = set(request.GET.getlist('test'))
+    tests_left = set(tests)
     data = {'success': {}, 'error': {}}
     status = 200
     for health_check in get_health_checks():
@@ -33,15 +33,15 @@ def health(request):
             health_check.__qualname__])
         if tests and func not in tests:
             continue
-        tests.discard(func)
+        tests_left.discard(func)
         success, detail = health_check()
         data['success' if success else 'error'][func] = detail
         if not success:
             status = 503
-    if tests:
+    if tests_left:
         if status == 200:
             status = 404
-        for test in tests:
+        for test in tests_left:
             data['error'][test] = 'Unknown health check'
     # Only staff members are allowed to see details...
     if not _show_health_details(request):
