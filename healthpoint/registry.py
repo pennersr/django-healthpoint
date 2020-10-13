@@ -12,7 +12,7 @@ def get_health_checks():
     if not _initialized:
         for app in settings.INSTALLED_APPS:
             try:
-                importlib.import_module('{}.health'.format(app))
+                importlib.import_module("{}.health".format(app))
             except ImportError:
                 pass
         _initialized = True

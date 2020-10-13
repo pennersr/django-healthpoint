@@ -2,5 +2,5 @@ from django.conf.urls import include, url
 
 
 urlpatterns = [
-    url(r'^', include('healthpoint.urls')),
+    url(r"^", include("healthpoint.urls")),
 ]
