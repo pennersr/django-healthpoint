@@ -43,6 +43,10 @@ Install the app::
     HEALTHPOINT_BASICAUTH_USERNAME = 'john'
     HEALTHPOINT_BASICAUTH_PASSWORD = 'doe'
 
+    # If set to True authentication is required for executing the
+    # health checks.
+    HEALTHPOINT_AUTH_REQUIRED = True
+
     # urls.py
     urlpatterns = [
         ...
