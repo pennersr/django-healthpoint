@@ -1,11 +1,13 @@
 sudo: false
 language: python
 python:
- - "3.4"
  - "3.5"
  - "3.6"
+ - "3.7"
+ - "3.8"
+ - "3.9"
 install:
-  - pip install tox-travis
+  - pip install tox-travis==0.12
   - pip install "coverage>=3.7.1" coveralls
 script: tox
 after_success:
