@@ -11,7 +11,6 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sites",
     "django.contrib.auth",
-    "django.contrib.admin",
     "healthpoint",
     "healthpoint.tests",
 ]

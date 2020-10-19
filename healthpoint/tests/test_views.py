@@ -1,7 +1,8 @@
-from django.core.urlresolvers import reverse
 import base64
 from django.test import TestCase, override_settings
 from django.utils.http import urlencode
+from django.test import override_settings
+from django.urls import reverse
 
 
 class HealthTestCase(TestCase):
