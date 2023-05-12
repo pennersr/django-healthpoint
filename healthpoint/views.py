@@ -2,6 +2,7 @@ import base64
 
 from django.conf import settings
 from django.http import JsonResponse
+
 from healthpoint.registry import get_health_checks
 
 

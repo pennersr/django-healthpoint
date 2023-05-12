@@ -2,7 +2,6 @@ import importlib
 
 from django.conf import settings
 
-
 _checks = []
 _initialized = False
 

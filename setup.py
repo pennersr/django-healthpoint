@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 from __future__ import unicode_literals
+
 import codecs
 import os
-from setuptools import setup, find_packages
+
+from setuptools import find_packages, setup
 from setuptools.command.test import test as TestCommand
 
 import healthpoint
