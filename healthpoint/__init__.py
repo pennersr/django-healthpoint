@@ -4,7 +4,7 @@
 |  | |___ /~~\ |___  |  |  | |    \__/ | | \|  |
 
 """  # noqa
-VERSION = (0, 4, 1, "final", 0)
+VERSION = (0, 5, 0, "final", 0)
 
 __title__ = "django-healthpoint"
 __version_info__ = VERSION
@@ -13,4 +13,4 @@ __version__ = ".".join(map(str, VERSION[:3])) + (
 )
 __author__ = "Raymond Penners"
 __license__ = "MIT"
-__copyright__ = "Copyright 2018-2020 Raymond Penners and contributors"
+__copyright__ = "Copyright 2018-2023 Raymond Penners and contributors"
