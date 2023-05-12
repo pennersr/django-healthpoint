@@ -1,6 +1,6 @@
-from django.conf.urls import include, url
+from django.conf.urls import include, re_path
 
 
 urlpatterns = [
-    url(r"^", include("healthpoint.urls")),
+    re_path(r"^", include("healthpoint.urls")),
 ]
