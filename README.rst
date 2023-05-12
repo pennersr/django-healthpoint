@@ -5,8 +5,8 @@ Welcome to django-healthpoint!
 .. image:: https://badge.fury.io/py/django-healthpoint.png
    :target: http://badge.fury.io/py/django-healthpoint
 
-.. image:: https://travis-ci.org/pennersr/django-healthpoint.png
-   :target: http://travis-ci.org/pennersr/django-healthpoint
+.. image:: https://github.com/pennersr/django-healthpoint/actions/workflows/ci.yml/badge.svg
+   :target: https://github.com/pennersr/django-healthpoint/actions
 
 .. image:: https://img.shields.io/pypi/v/django-healthpoint.svg
    :target: https://pypi.python.org/pypi/django-healthpoint
