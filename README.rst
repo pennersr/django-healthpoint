@@ -11,7 +11,7 @@ Welcome to django-healthpoint!
 .. image:: https://img.shields.io/pypi/v/django-healthpoint.svg
    :target: https://pypi.python.org/pypi/django-healthpoint
 
-.. image:: https://coveralls.io/repos/pennersr/django-healthpoint/badge.png?branch=master
+.. image:: https://coveralls.io/repos/pennersr/django-healthpoint/badge.png?branch=main
    :alt: Coverage Status
    :target: https://coveralls.io/r/pennersr/django-healthpoint
 
